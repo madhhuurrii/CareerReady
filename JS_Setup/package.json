@@ -1,0 +1,23 @@
+{
+  "name": "campus",
+  "version": "1.0.0",
+  "description": "SEM6 Mini Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhhuurrii/SEM6_MiniProj.git"
+  },
+  "author": "Madhuri,Sneha,Aishwarya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madhhuurrii/SEM6_MiniProj/issues"
+  },
+  "homepage": "https://github.com/madhhuurrii/SEM6_MiniProj#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.6"
+  }
+}
