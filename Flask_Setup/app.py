@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.secret_key = 'somesecretkeyiknow'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLAlCHEMY_ECHO']= True
 
 db = SQLAlchemy(app)
 
@@ -53,6 +54,7 @@ def login():
         if user and user.password == password:
             # session['user_id']=user.id
             return redirect(url_for('profile'))
+        flash("Wrong login details!!")
         return redirect(url_for('login'))
     return render_template('login.html')
 
