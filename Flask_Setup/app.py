@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, flash, redirect, url_for, g
-from flask_bcrypt import bcrypt
+# from flask_bcrypt import bcrypt
 from flask_sqlalchemy import SQLAlchemy
 # from models import User
 
