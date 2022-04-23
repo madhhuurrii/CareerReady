@@ -13,6 +13,8 @@ print(X)
 Y = np.array(career.iloc[:,17])
 print(Y)
 
+col = career.shape
+print(col)
 # labelling the columns of the dataframe
 career.columns = ["Database Fundamentals","Computer Architeture","Distributed Computing Systems","Cyber Security","Networking","Development","Programming Skills","Project Management",
 "Computer Forensics Fundamentals","Technical Communication"," AI ML", "Software Engineering", "Business Analysis","Communication Skills", "Data Science", "Troubleshooting skills", "Graphic Designing","Roles"]

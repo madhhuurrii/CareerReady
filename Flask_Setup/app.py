@@ -46,6 +46,9 @@ class User(db.Model):
 #     else:
 #         g.user = None
 
+@app.route('/hometest')
+def hometest():
+    return render_template('hometest.html')
 
 @app.route("/login",methods=['GET','POST'])
 def login():
@@ -57,11 +60,13 @@ def login():
         user = User.query.filter_by(email=email).first()
         # user =[x for x in users if x.email==email][0]
         if user and user.password == password:
-            # session['user_id']=user.id
-            return redirect(url_for('profile'))
-        flash("Wrong login details!!")
-        return redirect(url_for('login'))
+            # return render_template('hometest.html')
+            return redirect(url_for('hometest'))
+        else:
+            flash("Wrong login details!!")
+        # return redirect(url_for('login'))
     return render_template('login.html')
+    
 
 @app.route('/register',methods=['GET','POST'])
 def register():
@@ -161,9 +166,6 @@ def result():
       return render_template("testafter.html",final_res=final_res,job_dict=jobs_dict,job0=data1)
 
 
-@app.route('/hometest')
-def career():
-    return render_template("hometest.html")
 
 
 if __name__ == '__main__':

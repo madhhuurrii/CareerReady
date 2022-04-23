@@ -1,16 +1,5 @@
-<html>
-<head>
-  <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<title>Intelligent Career Guidance System</title>
-
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-		
-
+{% extends 'base.html' %}
+{% block head %}
   <link href="{{ url_for('static', filename='chart.css') }}" rel="stylesheet" media="all">
   
   <link href="{{ url_for('static', filename='css1/bootstrap.min.css') }}" rel="stylesheet" media="all">
@@ -19,38 +8,21 @@
   
   <link href="{{ url_for('static', filename='css1/s.css') }}" rel="stylesheet" media="all">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-</head>
+  {% endblock head %}
+  {% block body %}
 <body>
 <!--Header-->
-        <header id="header" class="transparent-nav" style="position: fixed;background-color: rgb(120, 70, 167); top: 0;">
-			<div class="container">
-
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="http://127.0.0.1/php%20CAREERLY/main.php">Career.ly</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Mobile toggle -->
-					<button class="navbar-toggle">
-						<span></span>
-					</button>
-					<!-- /Mobile toggle -->
-				</div>
-
-				
-				<!-- Navigation -->
-				
-				
-			</div>
-		</header>
-	
+<b><h1>Hey! The top job roles that matched your skills.....</h1><br><br></b>
    <br><br><br><br><br><br><br>
-   <b><h1>Hey! The top job roles that matched your skills.....</h1><br><br></b>
-   <div class="graph-cont">
+   {%for key, value in final_res.items(): %}
+	{%if job0!=job_dict[value]%}
+   
+   <h2 >{{job_dict[value]}}</h2>
+   {%endif%}
+   {%endfor%}
+   <!-- <div class="graph-cont"> -->
    <h1>You can be a great:</h1>
-   <div class="bar bar1" ><a href="http://127.0.0.1/php%20CAREERLY/blog.php" style="text-decoration: none;"><font color="white">{{ job0 }}</a></font></div><br>
+   <div class="bar bar1" ><a href="http://127.0.0.1/php%20CAREERLY/blog.php" style="text-decoration: none;"><font>{{ job0 }}</a></font></div><br>
 	
 		
 		
@@ -59,7 +31,7 @@
 	 {%for key, value in final_res.items(): %}
 		{%if job0!=job_dict[value]%}
 		 <div class="bar bar2"><a href="http://127.0.0.1/php%20CAREERLY/blog.php" style="text-decoration: none;"><font>{{job_dict[value]}}</a></font></div><br>
-
+          <p>{{job_dict[value]}}</p>
 	 
 	 
 	 
@@ -90,55 +62,10 @@
    <div class="bar bar4"><a href="#" style="text-decoration: none;"><font color="white">{{ job3 }}</a></font></div><br>-->
 	
   </div>
-  <br><br><br><br><br><br><br>
-  <!-- Footer -->
-		<footer id="footer" class="section">
-
-			<!-- container -->
-			<div class="container">
-
-				<!-- row -->
-				<div class="row">
-
-					<!-- footer logo -->
-					<div class="col-md-6">
-						<div class="footer-logo">
-							<a class="logo" style="font-size: 30px;" href="main.php">Career.ly</a>
-						</div>
-					</div>
-					<!-- footer logo -->
-
-
-				</div>
-				<!-- /row -->
-
-				<!-- row -->
-				<div id="bottom-footer" class="row">
-
-					<!-- social -->
-					<div class="col-md-4 col-md-push-8">
-						
-					</div>
-					<!-- /social -->
-
-					<!-- copyright -->
-					<div class="col-md-8 col-md-pull-4">
-						<div class="footer-copyright">
-							<span>&copy; Copyright 2021. All Rights Reserved. </span>
-						</div>
-					</div>
-					<!-- /copyright -->
-					</div>
-				<!-- row -->
-
-			</div>
-			<!-- /container -->
-
-		</footer>
-		<!-- /Footer -->
+ 
 
 </body>
-</html>
+{% endblock body %}
 <!--
            
       #print(jobs_dict[predictions[0]])

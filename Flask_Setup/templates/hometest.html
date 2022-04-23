@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<title>Intelligent Career Guidance System</title>
-
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-		
-
+{% extends 'base.html' %}
+{% block head %}
   <link href="{{ url_for('static', filename='chart.css') }}" rel="stylesheet" media="all">
   
   <link href="{{ url_for('static', filename='css1/bootstrap.min.css') }}" rel="stylesheet" media="all">
@@ -21,54 +8,11 @@
   
   <link href="{{ url_for('static', filename='css1/s.css') }}" rel="stylesheet" media="all">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-</head>
-<body>
+ 
+
 <!--Header-->
-        <header id="header" class="transparent-nav" style="position: fixed;background-color: rgb(120, 70, 167); top: 0;">
-			<div class="container">
-
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="http://127.0.0.1/php%20CAREERLY/main.php">Career.ly</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Mobile toggle -->
-					<button class="navbar-toggle">
-						<span></span>
-					</button>
-					<!-- /Mobile toggle -->
-				</div>
-
-				
-				<!-- Navigation -->
-				
-				
-
-			</div>
-		</header>
-		<div class="hero-area section">
-
-			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(static/img/bgc2.jpg); " ></div>
-			<!-- /Backgound Image -->
-
-			<div class="container">
-				<div class="row" >
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<ul class="hero-area-tree">
-							<li><a href="http://127.0.0.1/php%20CAREERLY/main.php">Services</a></li>
-							<li><a href="http://127.0.0.1:5000/">Career Prediction</a></li>
-						</ul>
-						<h1 class="white-text">Get Started to Discover Yourself!</h1>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-
+       
+	
     <!-- Icons font CSS-->
 
     <link href=" {{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
@@ -86,8 +30,9 @@
       <!-- Main CSS-->
 
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
-</head>
+	{% endblock head %}
 
+{% block body %}
 <body>
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
@@ -415,5 +360,4 @@
 		
 
 </body>
-
-</html>
+{% endblock body %}
