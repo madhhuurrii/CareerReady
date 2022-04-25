@@ -1,5 +1,5 @@
 .hire-login{
-    background: linear-gradient(270deg, #7DB6FB 0%,#6fa0dd  100%);
+    background: linear-gradient(270deg, hsl(0, 60%, 78%) 0%,#C99999  100%);
     
 }
 .hire-login-container{
@@ -10,14 +10,14 @@
     width:400px;
 }
 .hire-login-title{
-    color: #7DB6FB;
+    color: #C99999;
 
 }
 .hire-login-subtitle{
-    color: #7DB6FB;
+    color: #C99999;
 }
 .hire-login-submit{
-    background: #7DB6FB;
+    background: #C99999;
 border-radius: 10px;
 color:#ffffff;
 border: none;
